@@ -1,4 +1,5 @@
-import { serve } from "@upstash/workflow/nextjs"
+{
+  /*import { serve } from "@upstash/workflow/nextjs"
 
 type InitialData = {
     email: string
@@ -42,4 +43,6 @@ type UserState = "non-active" | "active"
 const getUserState = async (): Promise<UserState> => {
     // Implement user state logic here
     return "non-active"
+}
+*/
 }
