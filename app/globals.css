@@ -1,0 +1,209 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+    border-radius: 0px;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 0px;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: transparent;
+  }
+}
+
+
+@layer components {
+
+  .navbar {
+    display: flex;
+    gap: 2rem;
+    align-items:center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
+
+  .page-overview {
+    @apply flex flex-col gap-6 items-center xl:flex-row xl:items-start xl:justify-between;
+  }
+
+
+  .banner {
+    @apply font-raleway font-extrabold text-center italic  text-secondary-light py-2 sm:text-2xl xl:text-4xl mt-2 ;
+
+  }
+
+  .logo {
+    @apply  items-center rounded-full ;
+
+  }
+  .bg {
+    @apply min-h-screen bg-gray-950 dark:bg-slate-700 text-gray-950 dark:text-white  ;
+
+  }
+
+  .tagline {
+    @apply flex flex-col-reverse italic text-light-300 xl:mb-5 sm:mb-5 xl:ml-16 sm:ml-16 sm:text-2xl xl:text-3xl;
+  }
+
+  .introduction {
+    @apply font-rockwell italic font-bold text-primary sm:text-2xl xl:text-4xl;
+  }
+  .name{
+    @apply font-rockwell italic font-bold text-primary sm:text-2xl xl:text-4xl;
+  }
+  .role {
+    @apply font-bold text-red-500 xl:ml-8 sm:ml-5 sm:text-2xl xl:text-4xl;
+  }
+  .developer {
+    @apply font-semibold text-primary xl:ml-1 sm:ml-1 sm:text-2xl xl:text-4xl;
+  }
+  .expert-list {
+    @apply mt-6 flex flex-wrap gap-5 max-xs:justify-between xs:gap-10 ;
+  }
+  .expert-info{
+    @apply mt-7 flex flex-row flex-wrap gap-4 text-xl text-light-100;
+  }
+  .title{
+  @apply flex flex-col items-center text-center py-10 font-montagu text-light-100 my-1 sm:text-2xl xl:text-4xl;
+  }
+  .projects {
+    @apply flex flex-row flex-wrap gap-4 mt-1;
+  }
+  .projects p {
+    @apply text-xl text-light-900 leading-tight;
+  }
+
+  .description {
+    @apply text-xs md:text-sm lg:text-lg xl:text-xl text-light-100 mt-2 text-justify;
+  }
+  .auth-container {
+    @apply relative flex flex-col-reverse text-light-100 sm:flex-row;
+  }
+
+  .auth-form {
+    @apply my-auto flex h-full min-h-screen flex-1 items-center bg-pattern bg-cover bg-top  px-5 py-10;
+  }
+
+  .auth-box {
+    @apply gradient-vertical mx-auto flex max-w-xl flex-col gap-6 rounded-lg p-10;
+  }
+
+  .auth-illustration {
+    @apply sticky h-40 w-full sm:top-0 sm:h-screen sm:flex-1;
+  }
+  .form-btn {
+    @apply bg-primary text-light-100 hover:bg-primary inline-flex min-h-14 w-full items-center justify-center rounded-md px-6 py-2 font-bold text-base !important;
+  }
+  .upload-btn {
+    @apply flex min-h-14 w-full items-center justify-center gap-1.5 rounded-md bg-gray-950 text-light-400 hover:bg-primary inline-flex min-h-14 w-full;
+  }
+
+  .upload-filename {
+    @apply mt-1 text-center text-xs;
+  }
+  .form-input {
+    @apply w-full min-h-14 border-none text-base font-bold placeholder:font-normal text-white placeholder:text-light-100 focus-visible:ring-0 focus-visible:shadow-none bg-gray-950 !important;
+  }
+
+  .text-size{
+  @apply text-xs md:text-sm lg:text-lg xl:text-xl ;
+}
+  .expertise {
+    @apply text-sm font-montagu text-secondary-dark mt-2;
+  }
+  .expertise-p {
+    @apply text-sm font-montagu text-light-200  mt-2;
+  }
+  .socials {
+    @apply  mt-4 min-h-14 w-fit;
+  }
+
+  .socials a {
+    @apply text-white text-2xl hover:text-primary-hover transition-all;
+  }
+.socials-location
+{
+  @apply flex flex-col gap-6  items-center text-center py-8
+}
+  .hire-me-btn {
+    @apply mt-4 min-h-14 w-fit bg-primary/90 text-white  hover:bg-primary-hover max-md:w-full !important;
+  }
+
+  .skills-icons {
+    @apply flex justify-center gap-6 mt-4;
+  }
+
+  .skills-icons img {
+    @apply w-12 h-12;
+  }
+
+  .experts-list {
+    @apply flex flex-wrap justify-center gap-6 mt-8;
+  }
+
+  .services {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8;
+  }
+
+  .services .service-card {
+    @apply bg-foreground text-black p-6 rounded-lg shadow-lg;
+  }
+  .experts-img_extra_small {
+    @apply w-[28.95px] h-10;
+  }
+
+  .experts-img_small {
+    @apply w-[55px] h-[76px];
+  }
+
+  .experts-img_medium {
+    @apply w-[144px] h-[199px];
+  }
+
+  .experts-img_regular {
+    @apply xs:w-[174px] w-[114px] xs:h-[239px] h-[169px];
+  }
+
+  .experts-img_wide {
+    @apply xs:w-[296px] w-[256px] xs:h-[404px] h-[354px];
+  }
+
+}
+
+
+@layer utilities {
+  .gradient-vertical {
+    background: linear-gradient(180deg, #12141d 0%, #12151f 100%);
+  }
+
+  .gradient-gray {
+    background: linear-gradient(270deg, #37363a 0%, #353637 100%);
+  }
+
+  .gradient-blue {
+    background: linear-gradient(180deg, #232839 0%, #12141d 100%);
+  }
+
+  .root-container {
+    @apply flex min-h-screen flex-1 flex-col bg-pattern bg-cover bg-top bg-fixed divide-background-dark px-5 xs:px-10 md:px-16;
+  }
+}
